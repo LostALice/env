@@ -1,0 +1,7 @@
+FROM python:3.7
+
+RUN pip install requests BeautifulSoup4 discord ffmpeg lxml PyNaCl
+
+RUN apt-get update && apt-get -y install ffmpeg
+
+RUN python -m pip install --upgrade pytube
